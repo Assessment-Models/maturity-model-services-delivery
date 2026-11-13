@@ -1,0 +1,37 @@
+id: dea:maturity-services-delivery
+repo_id: maturity-model-services-delivery
+type: maturity-model
+name: Services Delivery Maturity Model
+domain: services-delivery
+version: 1.0.0
+metamodel_version: 1.0.0
+status: stable
+owner: Head of Delivery / VP Engineering
+steward: Head of Delivery / VP Engineering
+effective_date: 2026-08-21
+review_date: 2027-02-21
+description: Services Delivery Maturity Model — assesses time-to-market, quality, customer outcomes, flow
+  efficiency and team health.
+score_scheme: dea-maturity-v2
+band_reference:
+  id: dea:maturity-bands-v2
+  version: 1.0.0
+  organization: technehub-labs
+  repository: dea-metamodel
+scale_levels:
+- L0
+- L1
+- L2
+- L3
+- L4
+relationships:
+- source_id: dea:maturity-services-delivery
+  target_id: dea:maturity-bands-v2
+  relationship_type: scored-by-v2-bands
+- source_id: dea:maturity-services-delivery
+  target_id: dea:catalog-metrics
+  relationship_type: measured-by
+tags:
+- maturity-model
+- services-delivery
+- v2-canonical
