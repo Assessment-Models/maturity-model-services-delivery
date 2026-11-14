@@ -21,19 +21,23 @@ entry. Semver applies:
 3. **References are immutable.** Every external reference (component, scale,
    dependency) must be a tag `vX.Y.Z`, a 40-character commit SHA, or a
    sha256 digest. `main`, `master` and `latest` are rejected by CI.
-4. **Level 1 and Level 2 CI must be green** before merge. Level 2 resolves
-   the handshake against the pinned `dea-metamodel` release.
+4. **Level 1, Level 2 and the repository-standard gate must be green** before
+   merge. Level 2 resolves the handshake against the pinned
+   `dea-metamodel` release.
 5. **Model identity is the registration id.** The `id` in `model.yaml` must
    match the `repo_id` in the model register and the id in
    `Assessment-Models/assessment-registry`. The repository name is a
    location, not an identity.
+6. **Version coherence is machine-checked.** `model.yaml`, `VERSION`, the
+   README `## Status` line and `standard.yaml` must always agree — the
+   repository-standard conformance workflow fails the build on drift.
 
 ## Registering a release
 
 After a release is tagged, add or update the registration record under
 `Assessment-Models/assessment-registry/registry/` with the immutable tag
-reference. A record must not point at a repository or reference that does not
-resolve — the ecosystem validator checks this.
+reference. A record must not point at a repository or reference that does
+not resolve — the ecosystem validator checks this.
 
 ## Licence
 
