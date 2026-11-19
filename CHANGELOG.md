@@ -6,6 +6,37 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.0] — 2026-11-19
+
+### Added
+
+- **CR-AM-13 Phase 4**: seeded criteria register draft
+  (`maturity/model/services-delivery-register-draft.yaml`) — five dimensions
+  (Time-to-Market, Quality, Customer Outcomes, Flow Efficiency, Team Health),
+  10 sub-dimensions, **16 criteria** with `DLV-*` criterion IDs as permanent
+  benchmarking keys. Draft-by-design: model owners own refinement (questionnaire,
+  weights) and the later stable promotion per CR-AM-13 §8.
+- `touchpoints.yaml` **v0.1.0** mirror record `tp-services-delivery-x-operations`
+  (consumes): upstream flow-state evidence is consumed from operations D1 rather
+  than re-assessed — `DLV-D4-SD1-C01` ↔ `OPS-D1-SD1-C01` and
+  `DLV-D4-SD2-C03` ↔ `OPS-D1-SD2-C04`.
+
+### Changed
+
+- `VERSION` and `model.yaml` 1.0.0 → 1.1.0 (minor, additive); model.yaml
+  declares the touchpoints manifest and notes the seed register.
+
+### Notes
+
+- Reciprocity with the ecosystem is content-complete: the peer's
+  `touchpoints.yaml` v0.2.0 ([maturity-model-operations release 2.0.0, PR #7]
+  (https://github.com/Assessment-Models/maturity-model-operations/pull/7)) cites
+  these `DLV` bindings on its side. Bindings become citable once both releases
+  are tagged (`v1.1.0` here, `v2.0.0` on the peer).
+- Touchpoint declarations stay `status: draft` until
+  `maturity-touchpoint-contract` publishes in `technehub-labs/dea-metamodel`
+  (issue #213).
+
 ## [1.0.0] — 2026-11-13
 
 ### Added

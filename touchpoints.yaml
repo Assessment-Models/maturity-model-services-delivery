@@ -1,10 +1,12 @@
 # =============================================================================
-# touchpoints.yaml — CR-AM-13 Phase 4 DRAFT (mirror record)
-# Contract: maturity-touchpoint-contract v0.1.0-draft (technehub-labs/dea-metamodel)
+# touchpoints.yaml — CR-AM-13 v0.1.0 (mirror record, release 1.1.0)
+# Contract: maturity-touchpoint-contract v0.1.0-draft (publication tracked in
+# technehub-labs/dea-metamodel issue #213); this file remains status: draft until
+# the contract publishes.
 # =============================================================================
 id: dea:touchpoints-services-delivery-v1
 repo_id: maturity-model-services-delivery
-version: 0.1.0-draft
+version: 0.1.0
 status: draft
 metamodel_version: 1.0.0
 contract: { id: maturity-touchpoint-contract, version: 0.1.0-draft, source: { organization: technehub-labs, repository: dea-metamodel } }
@@ -31,5 +33,9 @@ touchpoints:
   - ours: DLV-D4-SD2-C03
     theirs: OPS-D1-SD2-C04
     note: peer's commitment reliability is the say/do input here
-  status_note: unblocked by this seed register; ops mapping update follows in the operations 2.0.0 release
+  status_note: >-
+    Reciprocity complete on the content side: the peer's touchpoints.yaml v0.2.0
+    (maturity-model-operations release 2.0.0, PR #7) cites DLV-D4-SD1-C01 and
+    DLV-D4-SD2-C03 on its side of this same touchpoint. Bindings become citable
+    once v1.1.0 (this repo) and v2.0.0 (peer) are tagged.
   reciprocity: mirrors-tp-ops-x-services-delivery
