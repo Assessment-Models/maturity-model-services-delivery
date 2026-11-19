@@ -1,0 +1,35 @@
+# =============================================================================
+# touchpoints.yaml — CR-AM-13 Phase 4 DRAFT (mirror record)
+# Contract: maturity-touchpoint-contract v0.1.0-draft (technehub-labs/dea-metamodel)
+# =============================================================================
+id: dea:touchpoints-services-delivery-v1
+repo_id: maturity-model-services-delivery
+version: 0.1.0-draft
+status: draft
+metamodel_version: 1.0.0
+contract: { id: maturity-touchpoint-contract, version: 0.1.0-draft, source: { organization: technehub-labs, repository: dea-metamodel } }
+touchpoints:
+- id: tp-services-delivery-x-operations
+  mirrors: tp-ops-x-services-delivery
+  peer_asset: dea:maturity-operations
+  peer_repo: maturity-model-operations
+  peer_touchpoint_id: tp-ops-x-services-delivery
+  direction: consumes
+  mapping_type: consumes
+  summary: >-
+    The peer's D1 daily-operating evidence (value-stream visibility, WIP,
+    commitment reliability) feeds this model's Flow Efficiency criteria. This
+    model owns customer-visible delivery outcomes; the peer owns internal
+    flow health.
+  overlap_resolution: >-
+    Customer-facing outcome metrics (T2M, quality, satisfaction) are assessed
+    HERE. Internal flow health is assessed BY THE PEER (D1).
+  criteria_mapping:
+  - ours: DLV-D4-SD1-C01
+    theirs: OPS-D1-SD1-C01
+    note: upstream flow visibility consumed from peer evidence
+  - ours: DLV-D4-SD2-C03
+    theirs: OPS-D1-SD2-C04
+    note: peer's commitment reliability is the say/do input here
+  status_note: unblocked by this seed register; ops mapping update follows in the operations 2.0.0 release
+  reciprocity: mirrors-tp-ops-x-services-delivery
