@@ -1,0 +1,84 @@
+# =============================================================================
+# maturity/model/services-delivery-register-draft.yaml — CR-AM-13 Phase 4 SEED DRAFT
+# Seed criteria register unblocking the operations touchpoint
+# (tp-ops-x-services-delivery). SEMANTICS ARE SEEDS: the model owners own refinement.
+# Framed from: the model's published description (time-to-market, quality, customer outcomes, flow efficiency, team health)
+# =============================================================================
+id: dea:maturity-services-delivery-register-v1
+repo_id: maturity-model-services-delivery
+type: maturity-model
+name: Services Delivery Maturity Model - criteria register (seed draft)
+domain: services-delivery
+version: 1.1.0-draft
+metamodel_version: 1.0.0
+status: draft
+score_scheme: dea-maturity-v2
+band_reference:
+  id: dea:maturity-bands-v2
+  version: 1.0.0
+  organization: technehub-labs
+  repository: dea-metamodel
+scale_levels: [L0, L1, L2, L3, L4]
+scoring:
+  note: aggregation per the published maturity-scale.schema.json conventions; weights finalized by the model owners at register promotion.
+
+dimensions:
+- id: D1
+  name: Time-to-Market
+  sub_dimensions:
+  - id: D1-SD1
+    name: Lead time
+    criteria:
+    - { id: DLV-D1-SD1-C01, statement: Lead time from idea to production is measured for key services, evidence: [Lead-time dashboards] }
+    - { id: DLV-D1-SD1-C02, statement: Batch size is right-sized and batch metrics are visible, evidence: [Batch-size reports] }
+  - id: D1-SD2
+    name: Release cadence
+    criteria:
+    - { id: DLV-D1-SD2-C01, statement: Release frequency is tracked and improvement-targeted, evidence: [Deployment frequency data] }
+- id: D2
+  name: Quality
+  sub_dimensions:
+  - id: D2-SD1
+    name: Built-in quality
+    criteria:
+    - { id: DLV-D2-SD1-C01, statement: Automated verification (test pyramid) gates releases, evidence: [CI gate configuration] }
+    - { id: DLV-D2-SD1-C02, statement: Change failure rate is measured and acted on, evidence: [CFR dashboards] }
+  - id: D2-SD2
+    name: Defect economics
+    criteria:
+    - { id: DLV-D2-SD2-C01, statement: Escaped defects are tracked to root cause and prevention, evidence: [Defect analytics] }
+- id: D3
+  name: Customer Outcomes
+  sub_dimensions:
+  - id: D3-SD1
+    name: Outcome definition
+    criteria:
+    - { id: DLV-D3-SD1-C01, statement: Each service/product defines measurable customer outcomes, evidence: [Outcome registers] }
+  - id: D3-SD2
+    name: Outcome evidence
+    criteria:
+    - { id: DLV-D3-SD2-C01, statement: Customer adoption, satisfaction and outcome attainment are measured, evidence: [NPS/CSAT and usage analytics] }
+- id: D4
+  name: Flow Efficiency
+  sub_dimensions:
+  - id: D4-SD1
+    name: Flow metrics
+    criteria:
+    - { id: DLV-D4-SD1-C01, statement: Flow efficiency (active vs wait time) and flow distribution are measured for key value streams, evidence: [Flow analytics], touchpoints: [tp-services-delivery-x-operations] }
+    - { id: DLV-D4-SD1-C02, statement: Upstream flow-state (value-stream visibility, WIP) is consumed from operations evidence rather than re-assessed, evidence: [Ops D1 evidence packs] }
+  - id: D4-SD2
+    name: Delivery predictability
+    criteria:
+    - { id: DLV-D4-SD2-C01, statement: Forecasts use historical flow data, evidence: [Forecast models] }
+    - { id: DLV-D4-SD2-C03, statement: Commitment reliability (say/do ratio) is tracked per service, evidence: [Commitment/attainment records], touchpoints: [tp-services-delivery-x-operations] }
+- id: D5
+  name: Team Health
+  sub_dimensions:
+  - id: D5-SD1
+    name: Sustainability
+    criteria:
+    - { id: DLV-D5-SD1-C01, statement: Team health is measured regularly and trended, evidence: [Health survey data] }
+  - id: D5-SD2
+    name: Engagement
+    criteria:
+    - { id: DLV-D5-SD2-C01, statement: Sustainable pace is deliberate (not incidental), evidence: [Rota and load data] }
