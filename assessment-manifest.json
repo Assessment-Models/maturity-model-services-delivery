@@ -1,0 +1,24 @@
+{
+  "id": "maturity-model-services-delivery",
+  "title": "Services Delivery Maturity Model",
+  "layer": "maturity-model",
+  "architectural_concern": "Services Delivery",
+  "version": "v1.1.0",
+  "license": "MIT",
+  "conformance_status": "structural",
+  "standards_alignment": [
+    "OpenDEA",
+    "AM-MODEL-REPOSITORY-STANDARD"
+  ],
+  "locales": [
+    "en"
+  ],
+  "dimensions": [
+    "Time-to-Market",
+    "Quality",
+    "Customer Outcomes",
+    "Flow Efficiency",
+    "Team Health"
+  ],
+  "description": "Services Delivery Maturity Model — assesses time-to-market, quality, customer outcomes, flow efficiency and team health."
+}
