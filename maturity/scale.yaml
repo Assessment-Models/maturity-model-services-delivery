@@ -1,20 +1,32 @@
 id: dea:scale-services-delivery-v1
-version: 1.0.0
+version: 2.0.0
 metamodel_version: 1.0.0
 name: Services Delivery Maturity Model Scale (5-level)
-description: 'Model-owned scale for the Services Delivery Maturity Model. Five levels (L0..L4) scored
+description: 'Model-owned scale for the Services Delivery Maturity Model. Five capability levels (L-1..L-5) scored
   against the canonical v2 band instance (dea:maturity-bands-v2 v1.0.0): non-linear band widths 20/25/25/18/12
   with per-level effort multipliers 1.0 → 6.0. Linear topology, exponential progression. Level semantics
   are carried verbatim from the authoritative source; only the scoring fields differ between the frozen
-  v1-alpha lineage and the canonical v2 scheme.'
+  v1-alpha lineage and the canonical v2 scheme. Adoption of the L-0 Not Assessed + L-1..L-5
+  numbering follows dea-metamodel #214 and remains annotated as adoption-pending until the canonical
+  owners ratify.'
 status: stable
 ordering: ascending
 progression:
   topology: linear
   function: exponential
 levels:
-- id: L0
+- id: L-0
   ordinal: 0
+  name: Not Assessed
+  definition: 'Criterion not assessed: no evidence examined. Not a capability level: it scores 0 points
+    and lowers evidence-confidence, and it never inflates the index.'
+  characteristics:
+  - No evidence collected or verified.
+  expected_practices: []
+  evidence_expectations: []
+  short_description: Unassessed
+- id: L-1
+  ordinal: 1
   name: Emergent
   definition: Practice exists but is person-dependent and informal
   characteristics:
@@ -31,8 +43,8 @@ levels:
   - Quality measured only as defect count
   - Customer satisfaction surveys absent
   short_description: Delivery is unpredictable
-- id: L1
-  ordinal: 1
+- id: L-2
+  ordinal: 2
   name: Structured
   definition: Documented, agreed, but inconsistently enforced
   characteristics:
@@ -49,8 +61,8 @@ levels:
   - Customer NPS or CSAT trend tracked
   - Action register from retrospectives
   short_description: Core delivery practices established
-- id: L2
-  ordinal: 2
+- id: L-3
+  ordinal: 3
   name: Systematic
   definition: Formal, tooling-enabled, governance active
   characteristics:
@@ -67,8 +79,8 @@ levels:
   - Release forecasting accuracy > 80%
   - Outcome-tracking per feature
   short_description: Delivery is data-informed
-- id: L3
-  ordinal: 3
+- id: L-4
+  ordinal: 4
   name: Adaptive
   definition: Metrics-driven; organisation senses and responds
   characteristics:
@@ -85,8 +97,8 @@ levels:
   - Time-to-market competitive benchmarks
   - Experimentation velocity tracked
   short_description: Delivery is optimised
-- id: L4
-  ordinal: 4
+- id: L-5
+  ordinal: 5
   name: Self-Optimising
   definition: Continuous improvement is autonomous, not programme-driven
   characteristics:
