@@ -2,9 +2,10 @@ id: maturity-model-services-delivery
 type: maturity-model
 name: Services Delivery Maturity Model
 description: Services Delivery Maturity Model — assesses time-to-market, quality, customer outcomes, flow
-  efficiency and team health. Release 1.1.0 ships a seeded criteria register draft and the operations
-  touchpoint mirror (CR-AM-13).
-version: 1.1.0
+  efficiency and team health. Release 2.0.0 adopts the canonical L-0 Not Assessed + L-1..L-5 scale
+  renumbering (dea-metamodel issue 214, adoption pending ratification) on top of the 1.1.0 register-draft
+  and operations touchpoint mirror work (CR-AM-13).
+version: 2.0.0
 conformance:
   contract:
     id: maturity-scale-contract
