@@ -4,7 +4,7 @@ Services Delivery Maturity Model — assesses time-to-market, quality, customer 
 
 ## Status
 
-`1.0.0` · stable — canonical v2 bands, independently released
+`2.0.0` · adoption pending [dea-metamodel #214] — canonical v2 bands, scale renumbering adopted
 
 ## Placement
 
@@ -42,7 +42,7 @@ maturity-model-services-delivery/
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── maturity/
-│   ├── scale.yaml                     # model-owned scale (L0..L4)
+│   ├── scale.yaml                     # model-owned scale (L-0 Not Assessed + L-1..L-5)
 │   └── model/services-delivery.yaml
 ├── examples/
 │   └── services-delivery-2026.yaml
